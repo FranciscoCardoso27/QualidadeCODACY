@@ -8,6 +8,8 @@ def multiplicar(a, b):
     return a * b
 
 def dividir(a, b):
+    if b == 0:
+        return "Erro: Divisão por zero"
     return a / b
 
 def calculadora():
@@ -23,13 +25,33 @@ def calculadora():
     num2 = float(input("Digite o segundo número: "))
 
     if escolha == '1':
-        print(f"{num1} + {num2} = {adicionar(num1, num2)}")
+        resultado = adicionar(num1, num2)
+        print(f"{num1} + {num2} = {resultado}")
     elif escolha == '2':
-        print(f"{num1} - {num2} = {subtrair(num1, num2)}")
+        resultado = subtrair(num1, num2)
+        print(f"{num1} - {num2} = {resultado}")
     elif escolha == '3':
-        print(f"{num1} * {num2} = {multiplicar(num1, num2)}")
+        resultado = multiplicar(num1, num2)
+        print(f"{num1} * {num2} = {resultado}")
     elif escolha == '4':
-        print(f"{num1} / {num2} = {dividir(num1, num2)}")
+        resultado = dividir(num1, num2)
+        print(f"{num1} / {num2} = {resultado}")
+    else:
+        print("Escolha inválida")
+
+    # Código duplicado para demonstrar problemas de duplicação
+    if escolha == '1':
+        resultado = adicionar(num1, num2)
+        print(f"{num1} + {num2} = {resultado}")
+    elif escolha == '2':
+        resultado = subtrair(num1, num2)
+        print(f"{num1} - {num2} = {resultado}")
+    elif escolha == '3':
+        resultado = multiplicar(num1, num2)
+        print(f"{num1} * {num2} = {resultado}")
+    elif escolha == '4':
+        resultado = dividir(num1, num2)
+        print(f"{num1} / {num2} = {resultado}")
     else:
         print("Escolha inválida")
 
