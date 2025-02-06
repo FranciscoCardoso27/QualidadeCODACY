@@ -15,6 +15,11 @@ class SistemaCadastro:
         aluno = Aluno(nome, idade, matricula)
         self.alunos.append(aluno)
         print(f"Aluno {nome} adicionado com sucesso!")
+        
+    def adicionar_aluno(self, nome, idade, matricula):
+        aluno = Aluno(nome, idade, matricula)
+        self.alunos.append(aluno)
+        print(f"Aluno {nome} adicionado com sucesso!")
 
     def listar_alunos(self):
         for aluno in self.alunos:
@@ -74,6 +79,8 @@ class SistemaCadastro:
             
             else:
                 print("Opção inválida! Tente novamente.")
+                
+                
 
 def main():
     sistema = SistemaCadastro()
